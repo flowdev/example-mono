@@ -1,0 +1,20 @@
+{
+	tool: ["x/*", "entities"],
+	db: ["frontend/customer", "backend/catalogue"],
+
+	size: 1024
+
+	allowAdditionally: {
+		// package parse is allowed in API tests
+		// so we can test with real source code
+		"backend/user": ["email"]
+		"frontend/customer": ["email"]
+		"frontend/payment": [
+			"email",
+			"frontend/payment/banktransfer",
+			"frontend/payment/creditcard",
+			"frontend/payment/paypal",
+			"frontend/payment/vouchers",
+		]
+	}
+}
