@@ -1,0 +1,6 @@
+buyhist imports catalogue
+internalacts imports catalogue
+internalacts imports customer
+externalacts imports customer
+
+x/log is imported everywhere else
