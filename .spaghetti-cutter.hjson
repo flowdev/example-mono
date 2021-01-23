@@ -5,12 +5,13 @@
 	size: 1024
 
 	allowAdditionally: {
-		// package parse is allowed in API tests
-		// so we can test with real source code
+		// Emails have to be sent for forgotten passwords and successful payments
 		"backend/user": ["email"]
 		"frontend/customer": ["email"]
 		"frontend/payment": [
 			"email",
+
+			// the payment package uses all the payment methods
 			"frontend/payment/banktransfer",
 			"frontend/payment/creditcard",
 			"frontend/payment/paypal",
